@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>my-first-blog | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hyperledger fabric 环境搭建总结 该环境搭建由于国内墙的原因以及下载速度关系十分艰辛，主要结合[Hyperledger1.4中的binary手动下载][https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zongmin&#x2F;p&#x2F;11635686.html]以及[Hyperledger2.0前置环境条件搭建][https:&#x2F;&#x2F;www.cnblogs.com&#x2F;always-kaixuan&#x2F;p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my-first-blog">
+<meta property="og:url" content="http://yoursite.com/2020/08/16/my-first-blog/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hyperledger fabric 环境搭建总结 该环境搭建由于国内墙的原因以及下载速度关系十分艰辛，主要结合[Hyperledger1.4中的binary手动下载][https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zongmin&#x2F;p&#x2F;11635686.html]以及[Hyperledger2.0前置环境条件搭建][https:&#x2F;&#x2F;www.cnblogs.com&#x2F;always-kaixuan&#x2F;p">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-16T07:25:21.000Z">
+<meta property="article:modified_time" content="2020-08-16T07:28:17.010Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/16/my-first-blog/" class="article-date">
+  <time datetime="2020-08-16T07:25:21.000Z" itemprop="datePublished">2020-08-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      my-first-blog
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Hyperledger-fabric-环境搭建总结"><a href="#Hyperledger-fabric-环境搭建总结" class="headerlink" title="Hyperledger fabric 环境搭建总结"></a>Hyperledger fabric 环境搭建总结</h2><ul>
+<li><p>该环境搭建由于国内墙的原因以及下载速度关系十分艰辛，主要结合[Hyperledger1.4中的binary手动下载][<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zongmin/p/11635686.html]%E4%BB%A5%E5%8F%8A[Hyperledger2.0%E5%89%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E6%9D%A1%E4%BB%B6%E6%90%AD%E5%BB%BA][https://www.cnblogs.com/always-kaixuan/p/12398251.html]%E4%BB%A5%E5%8F%8A[Hyperledger">https://www.cnblogs.com/zongmin/p/11635686.html]以及[Hyperledger2.0前置环境条件搭建][https://www.cnblogs.com/always-kaixuan/p/12398251.html]以及[Hyperledger</a> fabric 发行版2.2的官方文档][<a target="_blank" rel="noopener" href="https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html]%E6%9C%80%E7%BB%88%E6%88%90%E5%8A%9F%E6%90%AD%E5%BB%BA%E4%BA%86Hyperledger">https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html]最终成功搭建了Hyperledger</a> fabric v2.2以及fabric-ca1.4.8的环境，并成功跑通了test-network中的例子。</p>
+</li>
+<li><p>git, curl, wget安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git || sudo apt-get install curl ||sudo apt-get install wget</span><br></pre></td></tr></table></figure></li>
+<li><p>docker安装<br>参考[官方文档][<a target="_blank" rel="noopener" href="https://docs.docker.com/install/linux/docker-ce/ubuntu]">https://docs.docker.com/install/linux/docker-ce/ubuntu]</a> 中的说明安装即可，若觉得速度慢可以配置apt镜像<br>docker安装完成之后配置docker[阿里云镜像][<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors]">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors]</a></p>
+</li>
+<li><p>docker-compose安装<br>由于docker-compose速度太慢，通过pip来安装要快很多<br>① sudo apt install python-pip   #首先安装pip<br>② sudo pip install docker-compose<br>③ docker-compose –version   #查看版本</p>
+</li>
+<li><p>golang安装</p>
+</li>
+</ul>
+<ol>
+<li>根据<a target="_blank" rel="noopener" href="http://docscn.studygolang.com/doc/install">golang中文社区</a> 文档以及 <a target="_blank" rel="noopener" href="http://docscn.studygolang.com/doc/code.html">golang标准工作区搭建</a> 对本地golang环境进行配置</li>
+<li>通过<a target="_blank" rel="noopener" href="https://goproxy.cn/">golang包管理镜像站</a> 中的说明对本地的golang进行goproxy配置，否则在使用go工具时会没有反应</li>
+</ol>
+<ul>
+<li>fabric, fabric-sample仓库拉取，二进制数据下载，以及docker镜像拉取</li>
+</ul>
+<ol>
+<li>自己从GitHub上拉取fabric和fabric-samples的镜像。然后切换到自己想要的版本。</li>
+<li>然后在fabric/core/scripts中找到bootstrap.sh的文档，在最后输出出来需要下载的fabric, fabric-ca的二进制下载链接，然后打开用浏览器下载，将下载到的两个压缩包解压之后的bin文件下的文件放到一起，然后把两个文件夹都放到fabric-samples的路径下，并将bin目录添加到$PATH中。这里可以参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zongmin/p/11635686.html">手动下载二进制代码</a> 。</li>
+<li>最后通过<code>bash bootstrap.sh -d</code> 来自动拉取docker镜像</li>
+</ol>
+<ul>
+<li>testnetwork测试（<a target="_blank" rel="noopener" href="https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html">根据官网提供的教程</a> ）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/16/my-first-blog/" data-id="ckdwrpqx600013svhbjzl9nsq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/16/my-first-blog/">my-first-blog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
